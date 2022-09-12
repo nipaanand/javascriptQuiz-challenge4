@@ -9,6 +9,23 @@
 
    Additional questions can be added without affecting functionality
 
-## Build With:
-    -HTML5 CSS3,Javascript DOM   WebAPI
+## - Build With:
+    -HTML5 CSS3,Javascript DOM ,WebAPI
 
+## - Screenshot:<img width="1440" alt="Screen Shot 2022-09-12 at 11 36 18 AM" src="https://user-images.githubusercontent.com/105323937/189696263-21535d8f-6bfd-4dae-89e5-66bedf052cb8.png">
+
+## - Link
+
+## Live Site URL:
+ https://nipaanand.github.io/javascriptQuiz-challenge4/https://nipaanand.github.io/javascriptQuiz-challenge4/
+
+
+## - Solution URL:
+
+https://github.com/nipaanand/javascriptQuiz-challenge4.git
+
+
+
+[Author](#author)
+## - Github   
+[Nipa Mehta](https://www.github.com/nipaanand)
