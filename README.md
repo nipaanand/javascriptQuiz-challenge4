@@ -17,7 +17,7 @@
 ## - Link
 
 ## Live Site URL:
- https://nipaanand.github.io/javascriptQuiz-challenge4/https://nipaanand.github.io/javascriptQuiz-challenge4/
+ https://nipaanand.github.io/javascriptQuiz-challenge4/
 
 
 ## - Solution URL:
