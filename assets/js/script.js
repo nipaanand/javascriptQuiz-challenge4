@@ -63,11 +63,15 @@ function hideResultText(){
 var intervalID;
 var time;
 var currentQuestion;
+let leaderboardArray;
+
 
 document.querySelector("#start-button").addEventListener('click',startQuiz);
 
 
 function startQuiz(){
+    //hide any visible cards,show the question card
+
     hideCards();
     questionCard.removeAttribute("hidden");
 
@@ -81,7 +85,7 @@ function startQuiz(){
     
     intervalID = setInterval(countdown,1000);
 
-    //invoke displayTime here to ensukre time appears on the page as soon as start buton is clicked, not after 1 second
+    //invoke displayTime here to ensure time appears on the page as soon as start buton is clicked, not after 1 second
     displayTime();
 }
 // reduce time by 1 and display new value, if time runs out then end quiz
@@ -204,12 +208,14 @@ function updateStoredLeaderboard(leaderboardItem) {
     localStorage.setItem("leaderboardArray", JSON.stringify(leaderboardArray));
 }
 
+
 //get "leaderboardArray" from local storage (if it exists) and parse it into a javascript object using JSON.parse
 function getLeaderboard() {
     let storedLeaderboard = localStorage.getItem("leaderboardArray");
     if (storedLeaderboard !== null) {
         let leaderboardArray = JSON.parse(storedLeaderboard);
         return leaderboardArray;
+        console.log(leaderboardArray);
     } else {
         leaderboardArray = [];
     }
@@ -224,9 +230,10 @@ function renderLeaderboard() {
     for (let i = 0; i < sortedLeaderboardArray.length; i++) {
         let leaderboardEntry = sortedLeaderboardArray[i];
         let newListItem = document.createElement("li");
-        newListItem.textContent =
-            leaderboardEntry.initials + " - " + leaderboardEntry.score;
+        newListItem.textContent=leaderboardEntry.initials + leaderboardEntry.score;
         highscoreList.append(newListItem);
+        
+       
     }
 }
 
@@ -241,6 +248,7 @@ function sortLeaderboard() {
         return b.score - a.score;
     });
     return leaderboardArray;
+    console.log(leaderboardArray);
 }
 
 const clearButton = document.querySelector("#clear-button");
@@ -278,4 +286,5 @@ function showLeaderboard() {
 
     //display leaderboard on leaderboard card
     renderLeaderboard();
+    
 }
